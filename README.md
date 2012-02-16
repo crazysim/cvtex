@@ -1,20 +1,20 @@
 # Template of a CV typeset in XeTeX
 
-This is a fork of Taraborelli's CV template. As he himself says, I also was not happy with the templates over the internet. I was looking for some nice template with focus on typesetting and a nice output, not only a lot of information and details. I ended up in Tamborelli's website, with this nice template. Another source of inspiration is the [CV from Kieran Healy][kjh-vita].
+This is a fork of [Taraborelli's CV template][taraborelli]. As he himself says, I also was not happy with the templates found over the internet. I was looking for some nice template with focus on typesetting and a nice output, not only a lot of information and details. I ended up in Tamborelli's website, with this nice template. Another source of inspiration is the [CV from Kieran Healy][kjh-vita].
 
 [kjh-vita]: http://kjhealy.github.com/kjh-vita/
 
-I forked this work on github and made the modifications for my needs, like the cinclusion of some comments, changes on the fonts used, and a little modification in the layout itself.
+I forked this work on github and made the modifications for my needs, like the inclusion of some comments, changes on the fonts used, and a little modification on the layout.
 
 ## Requirements
 
-DISCLAIMER: This template is provided for free and without any guarantee that it will correctly compile on your system if you have a non-standard configuration.
+**DISCLAIMER: This template is provided for free and without any guarantee that it will correctly compile on your system if you have a non-standard configuration or missing packages and fonts.**
 
-I currently use TeX Live 2011 in Fedora 16, but I also was succesfull generating the pdf file on Windows using MiKTeX with the appropriate packages and fonts intalled. Some packages are not installed by default and is your responsibility to have them installed and working.
+I currently use TeX Live 2011 in Fedora 16, but I also succesfully generated the pdf file on Windows using MiKTeX with the appropriate packages and fonts intalled. Note that some packages are not installed by default.
 
 ### Fonts
 
-I tried to use Open Type fonts, since they are more flexible and scalable. But you'll probably need the XeTeX engine for full support of these fonts.
+I tried to use Open Type fonts, since they are more flexible and scalable. You'll probably need the XeTeX engine for full support of these fonts.
 
  - [Linux Libertine and Biolinum][libertine]
  - [Inconsolata][inconsolata]
@@ -24,7 +24,7 @@ I tried to use Open Type fonts, since they are more flexible and scalable. But y
 
 ### Packages
 
-Just search for these packages in CTAN for instructions or download. If you use Linux, probably these packages can be installed easily with the software manager.
+Just search for these packages in CTAN for instructions or download. If you use Linux, probably these packages can be installed easily with the default software manager.
 
  - xltxtra
  - xcolor
@@ -34,6 +34,8 @@ Just search for these packages in CTAN for instructions or download. If you use 
  - sectsty
  - ulem
  - hyperref
+
+## Original work
 
 Below you'll find the original README from [Taraborelli's website][taraborelli]. Please note that this work is licensed under Creative Commons license.
 
