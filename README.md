@@ -35,7 +35,9 @@ Just search for these packages in CTAN for instructions or download. If you use 
  - ulem
  - hyperref
 
-Below you'll find the original README from Taraborelli's website. Please note that this work is licensed under Creative Commons license.
+Below you'll find the original README from [Taraborelli's website][taraborelli]. Please note that this work is licensed under Creative Commons license.
+
+[taraborelli]: http://github.com/dartar/cvtex
 
 _Some typos were fixed_
 
