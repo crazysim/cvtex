@@ -5,6 +5,7 @@ This is a fork of [Taraborelli's CV template][taraborelli]. As he himself says, 
 Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
 
 [kjh-vita]: http://kjhealy.github.com/kjh-vita/
+[taraborelli]: https://github.com/dartar/cvtex
 
 I forked this work on github and made the modifications for my needs, like the inclusion of some comments, changes on the fonts used, and a little modification on the layout.
 
