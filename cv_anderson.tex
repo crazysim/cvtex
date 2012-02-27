@@ -1,0 +1,185 @@
+%-----------------------------------------------------------------------
+% Anderson Konzen (anderson.konzen at gmail)
+% Template of a CV typeset in XeTeX
+% 
+% URL: https://github.com/anderkonzen/xetexcv
+% DISCLAIMER: This template is provided for free and without any
+%             guarantee that it will correctly compile on your
+%             system if you have a non-standard configuration.
+%
+% (This work is a fork from https://github.com/dartar/cvtex)
+%
+% This modified version is licensed under the same Creative Commons
+% Attribution-ShareAlike license:
+% http://creativecommons.org/licenses/by-sa/3.0/.
+%-----------------------------------------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt,a4paper]{article}
+
+\def\myname{Anderson Konzen}
+\def\myemail{anderson.konzen@gmail.com}
+\def\myskype{andersonkonzen}
+\def\mycellphone{+55 51 9196 0949}
+\def\myaddress{Av. Cauduro, 57/301\\Porto Alegre, \textsc{rs} - 90035-030\\Brazil}
+
+
+%% Loads the fontspec package, so we can easily select system fonts
+%\usepackage{fontspec}
+%% It implements some odds-and-ends features and improved functionality for broken or sub-standard LaTeX methods when using the XeTeX format. Already loads the fontspec package.
+\usepackage{xltxtra}
+%% Loads xcolor package, so we can use color names instead of rgb values
+\usepackage{xcolor}
+
+%-----------------------------------------------------------------------
+% Document Layout
+%-----------------------------------------------------------------------
+%% Loads geometry package, so we can easily change page setup
+\usepackage{geometry}
+\geometry{a4paper,         %% Specifies the paper size
+  textwidth=5.5in,         %% Specifies the width of body (the text area)
+  textheight=9.0in,        %% Specifies the height of body (the text area)
+  marginparsep=7pt,        %% Modifies separation between body and marginal notes
+  marginparwidth=.6in}     %% Modifies width of the marginal notes
+\setlength\parindent{0in}  %% Amount of indentation at the first line of a paragraph.
+
+%-----------------------------------------------------------------------
+% Fonts
+%-----------------------------------------------------------------------
+\setmainfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Linux Libertine O}
+\setsansfont[Mapping={tex-text},Color=AA0000]{Linux Biolinum O}
+\setmonofont[Mapping={tex-text},Scale=0.8]{Inconsolata}
+
+%-----------------------------------------------------------------------
+% Custom Commands
+%-----------------------------------------------------------------------
+\chardef\&="E050  % Redefine '&' character
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+%% Configure margin years
+\usepackage{marginnote}
+\newcommand{\years}[1]{\marginnote{#1}}
+\renewcommand*{\raggedleftmarginnote}{}  %% Define margin note alignment (in this case, justified text at the left margin)
+%\setlength{\marginparsep}{7pt}  %% Already defined in geometry
+\reversemarginpar  %% Margin notes in left side of the page
+
+%-----------------------------------------------------------------------
+% Headings
+%-----------------------------------------------------------------------
+%% Provides a set of commands for changing the font used for the various sectional headings
+\usepackage{sectsty}
+%% Provides various types of underlining that can stretch between words and be broken across lines
+\usepackage[
+  normalem  %% \em and \emph still produce normal italics
+]{ulem}
+%% Change font size of section headers
+\sectionfont{\color[HTML]{AA0000}\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize} 
+\subsubsectionfont{\mdseries\upshape\large} 
+
+%-----------------------------------------------------------------------
+% PDF Setup
+%-----------------------------------------------------------------------
+\usepackage[
+  xetex,            %% Use XeTeX backend
+  colorlinks=true,  %% Colors the text of links and anchors
+  breaklinks=true,  %% Allow links to break over lines
+  pdftitle={{\myname} - Curriculum Vitae},
+  pdfauthor={\myname}
+]{hyperref}  
+\hypersetup{linkcolor=blue,filecolor=black,urlcolor=blue}
+
+
+%-----------------------------------------------------------------------
+%-----------------------------------------------------------------------
+% DOCUMENT
+%-----------------------------------------------------------------------
+\begin{document}
+{\LARGE \myname}\\
+\hrule
+\vspace{0.2in}
+{\large phone: \mycellphone}\\[.05cm]
+{\large email: \href{mailto:\myemail}{\texttt{\myemail}}}\\[.05cm]
+{\large skype: \myskype}\\[.2cm]
+\myaddress
+%\vfill
+\vspace{0.5in}
+
+%\hrule
+\section*{Professional Experience}
+
+\subsection*{Hewlett-Packard | {\footnotesize{porto alegre, rs, brazil}}}
+
+\years{2010- \ldots}Software Engineer\\
+Design and development of embedded software solution for a new product family of Network Scanners, Single Function Printers and MFPs of HP. The development is focused on the UI layer, using C\#, .NET and .NET Compact frameworks; HTML5 and WebServices.\\
+Due to the geographical distribution of the teams, I work with colleagues from the U.S. and India on a daily basis.
+
+\subsection*{Actia do Brasil | {\footnotesize{porto alegre, rs, brazil}}}
+
+\years{2007-2010}Project Coordinator\\
+During this time I worked as a coordinator for the projects of the Automotive Diagnostic BU, where I could improve my management skills.
+\begin{itemize}
+\item[-] Coordination of distributed teams engaged in software development for the company's automotive diagnostic business unit. Main objectives included reaching goals of performance, client satisfaction and delivery of artifacts to clients.
+\item[-] Management tasks were also improved on a daily basis: management of timeline, risks, people and communication between teams.
+\item[-] Worked as a developer in critical situations, helping with development, training and application of best practices of software engineering.
+\item[-] Mapping development process within the scope of the business unit.
+\item[-] Constant contact with teams of other subsidiaries to cooperate with development, mainly located in France and Germany.
+\end{itemize}
+
+\years{2005-2007}Software Developer\\
+Development of automotive diagnostic systems:
+\begin{itemize}
+\item[-] A web-based system was developed for Fiat do Brasil to allow FIAT engineers to remotely diagnose and repair electronic control units. The client side is a windows desktop application developed in C++/Visual C++ and the server side was developed in Java/JSP/Oracle/JBoss.
+\item[-] Development and updates for the VCI (vehicle communication interface) firmware.
+\item[-] C/C++/XML programming to add, update and fix protocols in Actia's solution for automotive diagnostics.
+\item[-] Experience in automotive communication protocols.
+\end{itemize}
+Other projects included:
+\begin{itemize}
+\item[-] Development of digital video capture system for automotive surveillance using embedded Linux.
+\item[-] Creation and support of installers for several Actia products using NSIS.
+\end{itemize}
+
+\subsection*{W3Haus | {\footnotesize{porto alegre, rs, brazil}}}
+
+\years{2003-2005}Web Developer\\
+Development of websites and intranet systems mainly using PHP/ASP/C\# and PostgreSQL/SQLServer.
+
+%\hrule
+\section*{Education}
+
+\years{2010-\ldots}\textsc{MSc} in Electrical Engineering at Pontifícia Universidade Católica do Rio Grande do Sul - \textsc{pucrs}, Porto Alegre, \textsc{rs}, Brazil\\
+{\em{Currently blocked.}}\\
+\years{2006-2007}\textsc{MBA} in Business Administration at Fundação Getúlio Vargas - \textsc{fgv}, Porto Alegre, \textsc{rs}, Brazil\\
+\years{1999-2003}\textsc{B.Eng} in Computer Engineering at Universidade Federal do Rio Grande do Sul - \textsc{ufrgs}, Porto Alegre, \textsc{rs}, Brazil
+
+%\hrule
+\section*{Languages}
+
+\begin{itemize}
+\item Portuguese (Native language)
+\item English (Professional working proficiency)
+\item French (Elementary proficiency)
+\end{itemize}
+
+%\hrule
+\section*{References}
+
+Available upon request.
+
+%\vspace{1cm}
+\vfill{}
+%\hrulefill
+
+\begin{center}
+{\scriptsize  Last updated: \today\- $\bullet$\- 
+% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+Typeset in \href{http://nitens.org/taraborelli/cvtex}{\XeTeX}\\
+% ---- FILL IN THE FULL URL TO YOUR CV HERE
+\href{https://github.com/anderkonzen/cvtex}{https://github.com/anderkonzen/cvtex}}
+\end{center}
+
+\end{document}
