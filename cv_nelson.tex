@@ -54,7 +54,7 @@
 %-----------------------------------------------------------------------
 \setmainfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Linux Libertine O}
 \setsansfont[Mapping={tex-text},Color=AA0000]{Linux Biolinum O}
-\setmonofont[Mapping={tex-text},Scale=0.8]{Monaco}
+\setmonofont[Mapping={tex-text},Scale=0.8]{Menlo}
 
 %-----------------------------------------------------------------------
 % Custom Commands
@@ -71,6 +71,12 @@
 \reversemarginpar  %% Margin notes in left side of the page
 
 \renewcommand{\years}[1]{#1}
+
+% Reference
+\newcommand{\reference}[4]{
+\subsection*{#1 | {\footnotesize{#2}}}
+#3 -- \href{mailto:#4}{\texttt{#4}}
+}
 %-----------------------------------------------------------------------
 % Headings
 %-----------------------------------------------------------------------
@@ -105,6 +111,7 @@
 \begin{document}
 {\LARGE \myname}\\
 \hrule
+\begin{multicols}{2}
 \vspace{0.2in}
 {\large phone: \mycellphone}\\[.05cm]
 {\large email: \href{mailto:\myemail}{\texttt{\myemail}}}\\[.05cm]
@@ -113,7 +120,6 @@
 %\vfill
 % \vspace{-0.2in}
 
-\begin{multicols}{2}
 
 \section*{Education}
 
@@ -121,6 +127,15 @@
 
 \begin{itemize}
     \item Expected Graduation: Fall 2012
+\end{itemize}
+
+\subsection*{Relevant Courses taken at UCSB}
+
+\begin{itemize}
+    \item CS130 -- C++ Data Structures and Analysis
+    \item CS154 -- Computer Architecture
+    \item ECE152A -- Digital Logic Design Methodologies
+    \item ECE153A -- Hardware Software Interface and Embedded Systems
 \end{itemize}
 
 %\hrule
@@ -152,8 +167,34 @@ and software.
 Designed, setup, configure, and maintained a VMWare, Linux, Windows, and
 pfSense-based network, accompanying virtual machines for file sharing and
 network traffic management, and devised and improved upon workarounds for
-problematic network issues for LAN Parties for 150 or more attendees for every
-quarter since Fall of 2010.
+problematic network issues for LAN Parties for 150+ attendees for every
+quarter since Fall of 2009.
+
+\section*{Selected Personal Projects and Contributions}
+
+\subsection*{UC Santa Barbara Subreddit Design | {\footnotesize{Santa Barbara, CA}}}
+
+Creator and Maintainer
+
+\years{May 2012 - \ldots}
+
+Produced most advanced Python and Ruby framework and deployment tool for
+developing preprocessed stylesheets and templated markdown for section of
+website subscribed to by 1,500 users. Said framework is easy to deploy with
+intuitive and minimal configuration and utilizes accepted standard Python and
+Ruby support tools. Framework is easy to extend should more advanced
+functionality be required (e.g. technical rivalries with other colleges). Also
+produced design.
+
+\subsection*{UCSB Moodle Google Chrome Extension | {\footnotesize{Santa Barbara, CA}}}
+
+Creator and Maintainer
+
+\years{June 2012 - \ldots}
+
+Produced opinionated UI modifications in the form of a Google Chrome extension
+to University Courseware website. Additions include auto-login, minor usability
+fixes, quick-menu, and psuedo-dashboard per course page. Audience of 60+ users.
 
 \section*{Interests, Skills, and Hobbies}
 
@@ -163,19 +204,25 @@ quarter since Fall of 2010.
         \begin{itemize}
             \item Debian Server, Ubuntu Desktop and Server -- Debian Packaging and Administration
             \item Mac OS X -- Homebrew Recipes and \texttt{launchd}
+            \item Android -- Native development.
         \end{itemize}
     \item Computer Networking -- \texttt{iptables}, \texttt{pf}, and pfSense
     \item IDE -- IntelliJ IDEA and Eclipse
     \item Text Editors -- Vim
     \item Databases -- PostgreSQL and SQLite
-    \item Web Development -- HTML5, SCSS, RoR, Play!, JavaScript, REST, JSON, and XML
-    \item Misc. Tools -- OpenStreetMap, Git, and \LaTeX
+    \item Web Development -- HTML5, SCSS, RoR, Play!, JavaScript, jQuery, REST, JSON, and XML
+    \item Analog Electronics 
+    \item Misc. Skills -- OpenStreetMap, Git, and \LaTeX
         \begin{itemize}
             \item TileMill, GitHub, and BitBucket
         \end{itemize}
-\end {itemize}
+\end{itemize}
 
-\end{multicols}
+\section*{References}
+
+\reference{Benjamin Price}{UCSB Housing and Residential Services}
+{(805)893-5555}{bprice@housing.ucsb.edu}
+
 
 %\hrule
 
@@ -185,8 +232,9 @@ quarter since Fall of 2010.
 % Available upon request.
 
 %\vspace{1cm}
-\vfill{}
+% \vfill{}
 %\hrulefill
+\end{multicols}
 
 \begin{center}
 {\scriptsize  Last updated: \today\- $\bullet$\- 
@@ -195,5 +243,4 @@ quarter since Fall of 2010.
 % ---- FILL IN THE FULL URL TO YOUR CV HERE
 Copies avaluable at \href{https://github.com/crazysim/cvtex}{https://github.com/crazysim/cvtex}}
 \end{center}
-
 \end{document}
