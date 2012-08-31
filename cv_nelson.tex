@@ -77,6 +77,21 @@
 \subsection*{#1 | {\footnotesize{#2}}}
 #3 -- \href{mailto:#4}{\texttt{#4}}
 }
+
+\newenvironment{packed_enum}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+\newenvironment{packed_item}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
 %-----------------------------------------------------------------------
 % Headings
 %-----------------------------------------------------------------------
@@ -120,23 +135,22 @@
 %\vfill
 % \vspace{-0.2in}
 
-
 \section*{Education}
 
-\years{2008-2012} \textsc{B.Sci} in Computer Science at University of California, Santa Barbara - Santa Barbara, CA
+\years{2008-2012}
 
-\begin{itemize}
-    \item Expected Graduation: Fall 2012
-\end{itemize}
+\textsc{B.Sci} in Computer Science at University of California, Santa Barbara - Santa Barbara, CA
 
-\subsection*{Relevant Courses taken at UCSB}
+Expected Graduation: Fall 2012
 
-\begin{itemize}
+\subsection*{Relevant Courses taken at UCSB:}
+
+\begin{packed_item}
     \item CS130 -- C++ Data Structures and Analysis
     \item CS154 -- Computer Architecture
     \item ECE152A -- Digital Logic Design Methodologies
     \item ECE153A -- Hardware Software Interface and Embedded Systems
-\end{itemize}
+\end{packed_item}
 
 %\hrule
 \section*{Experience}
@@ -184,7 +198,7 @@ website subscribed to by 1,500 users. Said framework is easy to deploy with
 intuitive and minimal configuration and utilizes accepted standard Python and
 Ruby support tools. Framework is easy to extend should more advanced
 functionality be required (e.g. technical rivalries with other colleges). Also
-produced design.
+produced design and artwork.
 
 \subsection*{UCSB Moodle Google Chrome Extension | {\footnotesize{Santa Barbara, CA}}}
 
@@ -198,31 +212,27 @@ fixes, quick-menu, and psuedo-dashboard per course page. Audience of 60+ users.
 
 \section*{Interests, Skills, and Hobbies}
 
-\begin{itemize}
+\begin{packed_item}
     \item Languages -- Verilog, Scala, Java, Ruby, Object-oriented C/C++, and Python
     \item Operating Systems and Platforms
-        \begin{itemize}
+        \begin{packed_item}
             \item Debian Server, Ubuntu Desktop and Server -- Debian Packaging and Administration
             \item Mac OS X -- Homebrew Recipes and \texttt{launchd}
-            \item Android -- Native development.
-        \end{itemize}
+            \item Android -- Native Java development.
+        \end{packed_item}
     \item Computer Networking -- \texttt{iptables}, \texttt{pf}, and pfSense
-    \item IDE -- IntelliJ IDEA and Eclipse
+    \item IDE -- IntelliJ IDEA, Eclipse, and Xilinx
     \item Text Editors -- Vim
     \item Databases -- PostgreSQL and SQLite
     \item Web Development -- HTML5, SCSS, RoR, Play!, JavaScript, jQuery, REST, JSON, and XML
     \item Analog Electronics 
     \item Misc. Skills -- OpenStreetMap, Git, and \LaTeX
-        \begin{itemize}
-            \item TileMill, GitHub, and BitBucket
-        \end{itemize}
-\end{itemize}
+\end{packed_item}
 
 \section*{References}
 
 \reference{Benjamin Price}{UCSB Housing and Residential Services}
 {(805)893-5555}{bprice@housing.ucsb.edu}
-
 
 %\hrule
 
