@@ -70,7 +70,7 @@
 %\setlength{\marginparsep}{7pt}  %% Already defined in geometry
 \reversemarginpar  %% Margin notes in left side of the page
 
-\renewcommand{\years}[1]{#1}
+\renewcommand{\years}[1]{{\footnotesize{#1}}}
 
 % Reference
 \newcommand{\reference}[4]{
@@ -213,8 +213,8 @@ fixes, quick-menu, and psuedo-dashboard per course page. Audience of 60+ users.
 \section*{Interests, Skills, and Hobbies}
 
 \begin{packed_item}
-    \item Languages -- Verilog, Scala, Java, Ruby, Object-oriented C/C++, and Python
-    \item Operating Systems and Platforms
+\item \textbf{Languages} -- Verilog, Scala, Java, Ruby, Object-oriented C/C++, and Python
+\item \textbf{Operating Systems and Platforms}
         \begin{packed_item}
             \item Debian Server, Ubuntu Desktop and Server -- Debian Packaging and Administration
             \item Mac OS X -- Homebrew Recipes and \texttt{launchd}
