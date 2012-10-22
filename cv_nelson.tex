@@ -25,7 +25,8 @@
 \def\myemail{nelson@mindflakes.com}
 % \def\myskype{crazysim1}
 \def\mycellphone{(626) 723-3427}
-\def\myaddress{Santa Barbara, CA}
+\def\myaddress{Santa Barbara, CA and Los Angeles, CA}
+\def\mygithub{crazysim}
 
 
 %% Loads the fontspec package, so we can easily select system fonts
@@ -42,7 +43,7 @@
 \usepackage{geometry}
 \geometry{letterpaper,         %% Specifies the paper size
   textwidth=7.5in,         %% Specifies the width of body (the text area)
-  textheight=10.0in,        %% Specifies the height of body (the text area)
+  textheight=10.5in,        %% Specifies the height of body (the text area)
   marginparsep=7pt,        %% Modifies separation between body and marginal notes
   marginparwidth=.5in}     %% Modifies width of the marginal notes
 \setlength\parindent{0in}  %% Amount of indentation at the first line of a paragraph.
@@ -127,13 +128,15 @@
 {\LARGE \myname}\\
 \hrule
 \begin{multicols}{2}
-\vspace{0.2in}
-{\large phone: \mycellphone}\\[.05cm]
-{\large email: \href{mailto:\myemail}{\texttt{\myemail}}}\\[.05cm]
+% \vspace{0.0in}
+{phone: \mycellphone}\\[.01cm]
+{email: \href{mailto:\myemail}{\texttt{\myemail}}}\\[.05cm]
 % {\large skype: \myskype}\\[.2cm]
 \myaddress
 %\vfill
 % \vspace{-0.2in}
+
+{Github: \href{http://www.github.com/\mygithub}{http://github.com/crazysim}}
 
 \section*{Education}
 
@@ -150,6 +153,8 @@ Expected Graduation: Fall 2012
     \item CS154 -- Computer Architecture
     \item CS162 -- Computer Languages
     \item CS176 -- Computer Networks
+    \item CS177 -- Computer Security
+    \item ECE194BB -- Android Development
 \end{packed_item}
 
 %\hrule
@@ -185,15 +190,16 @@ network traffic management, and devised and improved upon workarounds for
 problematic network issues for LAN Parties for 150+ attendees for every
 quarter since Fall of 2009.
 
-\subsection*{Because of Hope (Nonprofit)| {\footnotesize{Santa Barbara, CA}}}
+\subsection*{Because of Hope (Nonprofit 501(c)(3))| {\footnotesize{Santa Barbara, CA}}}
 
 Technical Support
 
 \years{2012- \ldots}
 
-Maintain existing website and VPS. Currently drafting and advising plans to help
-organization save money on website hosting, increase website performance, and
-provide for the possiblity of effortless scaling. 
+Maintained existing website and VPS. Currently drafting and advising plans to
+help organization save a dramatic amount of money on website hosting, increase
+website performance, reduce maintenance, and provide for the possibility of
+effortless scaling 
 
 \section*{Selected Personal Projects and Contributions}
 
@@ -203,13 +209,13 @@ Creator and Maintainer
 
 \years{May 2012 - \ldots}
 
-Produced most advanced Python and Ruby framework and deployment tool for
+Produced most advanced Python, Ruby, and SASS framework and deployment tool for
 developing preprocessed stylesheets and templated markdown for section of
-website subscribed to by 1,700 users. Said framework is easy to deploy with
+website subscribed to by 1,800 users. Said framework is easy to deploy with
 intuitive and minimal configuration and utilizes accepted standard Python and
 Ruby support tools. Framework is easy to extend should more advanced
 functionality be required (e.g. technical rivalries with other colleges). Also
-produced design and artwork.
+produced all design and artwork.
 
 \subsection*{UCSB Moodle Google Chrome Extension | {\footnotesize{Santa Barbara, CA}}}
 
@@ -219,7 +225,7 @@ Creator and Maintainer
 
 Produced opinionated UI modifications in the form of a Google Chrome extension
 to University Courseware website. Additions include auto-login, minor usability
-fixes, quick-menu, and dashboard per course page. Audience of 60+ users.
+fixes, quick-menu, and dashboard per course page. Audience of 80+ users.
 
 \section*{Interests, Skills, and Hobbies}
 
@@ -230,20 +236,23 @@ fixes, quick-menu, and dashboard per course page. Audience of 60+ users.
             \item Debian and Ubuntu Server-- Debian Packaging and Administration
             \item Mac OS X -- Homebrew Recipes and \texttt{launchd}
             \item Android -- Native Java development.
-            \item Heroku -- Ruby on Rails, Play Framework 2, and small scripts
+            \item Heroku -- Ruby on Rails, Play Framework 2, and automated scripts
         \end{packed_item}
     \item \textbf{Computer Networking} -- \texttt{iptables}, \texttt{pf}, and pfSense
     \item \textbf{IDE} -- IntelliJ IDEA, Eclipse, Unix
     \item \textbf{Text Editors} -- Vim
     \item \textbf{Databases} -- PostgreSQL and SQLite
-    \item \textbf{Web Development} -- HTML5, SCSS, LESS, Ruby on Rails, Play Framework 2, JavaScript, jQuery, Bootstrap, REST, and JSON
-    \item \textbf{Misc. Skills} -- OpenStreetMap, \texttt{git}, and \LaTeX
+    \item \textbf{Web Development} -- HTML5, SCSS, LESS, Ruby on Rails, Play Framework 2, JavaScript, jQuery, Zurb Framework, Bootstrap, REST, and JSON
+    \item \textbf{Misc. Skills} -- OpenStreetMap, \texttt{git}, AutoHotKey, and \LaTeX
 \end{packed_item}
 
 \section*{References}
 
 \reference{Benjamin Price}{UCSB Housing and Residential Services}
 {(805)893-5555}{bprice@housing.ucsb.edu}
+
+\reference{Natalie Lemonnier}{Because of Hope}
+{(818)620-8847}{natalie@becauseofhope.org}
 
 %\hrule
 
