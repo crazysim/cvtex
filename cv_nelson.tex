@@ -1,7 +1,7 @@
 %-----------------------------------------------------------------------
 % Anderson Konzen (anderson.konzen at gmail)
 % Template of a CV typeset in XeTeX
-% 
+%
 % URL: https://github.com/anderkonzen/xetexcv
 % DISCLAIMER: This template is provided for free and without any
 %             guarantee that it will correctly compile on your
@@ -25,7 +25,7 @@
 \def\myemail{nelson@mindflakes.com}
 % \def\myskype{crazysim1}
 \def\mycellphone{(626) 723-3427}
-\def\myaddress{Santa Barbara, CA and Los Angeles, CA}
+\def\myaddress{Santa Barbara, CA and San Gabriel Valley, CA}
 \def\mygithub{crazysim}
 
 
@@ -104,8 +104,8 @@
 ]{ulem}
 %% Change font size of section headers
 \sectionfont{\color[HTML]{AA0000}\mdseries\upshape\Large}
-\subsectionfont{\mdseries\scshape\normalsize} 
-\subsubsectionfont{\mdseries\upshape\large} 
+\subsectionfont{\mdseries\scshape\normalsize}
+\subsubsectionfont{\mdseries\upshape\large}
 
 %-----------------------------------------------------------------------
 % PDF Setup
@@ -116,7 +116,7 @@
   breaklinks=true,  %% Allow links to break over lines
   pdftitle={{\myname} - Curriculum Vitae},
   pdfauthor={\myname}
-]{hyperref}  
+]{hyperref}
 \hypersetup{linkcolor=blue,filecolor=black,urlcolor=blue}
 
 
@@ -136,26 +136,13 @@
 %\vfill
 % \vspace{-0.2in}
 
-{Github: \href{http://www.github.com/\mygithub}{http://github.com/crazysim}}
+{GitHub: \href{http://www.github.com/\mygithub}{http://github.com/crazysim}}
 
 \section*{Education}
 
 \years{2008-2012}
 
-\textsc{B.Sci} in Computer Science at University of California, Santa Barbara - Santa Barbara, CA
-
-Expected Graduation: Fall 2012
-
-\subsection*{Relevant Courses taken at UCSB:}
-
-\begin{packed_item}
-    \item CS130 -- C++ Data Structures and Analysis
-    \item CS154 -- Computer Architecture
-    \item CS162 -- Computer Languages
-    \item CS176 -- Computer Networks
-    \item CS177 -- Computer Security
-    \item ECE194BB -- Android Development
-\end{packed_item}
+\textsc{Bachlor of Science} in Computer Science at the University of California, Santa Barbara
 
 %\hrule
 \section*{Experience}
@@ -164,7 +151,7 @@ Expected Graduation: Fall 2012
 
 Network Consultant
 
-\years{2009- \ldots} 
+\years{2009- \ldots}
 
 Helped residents in UCSB Residential Housing get their devices online with ResNet.
 Developed tools to streamline configuration of these devices for printing to
@@ -181,25 +168,25 @@ Technical Committee Vice Chair
 
 \years{2009-2012}
 
-Managed technical aspects of many committee activities including its website
-and software.
+Managed technical matters of committee activities including public website
+and internal software and hardware.
 
 Designed, setup, configure, and maintained a VMWare, Linux, Windows, and
 pfSense-based network, accompanying virtual machines for file sharing and
 network traffic management, and devised and improved upon workarounds for
 problematic network issues for LAN Parties for 150+ attendees for every
-quarter since Fall of 2009.
+quarter since Fall of 2009 until December 2012.
 
 \subsection*{Because of Hope (Nonprofit 501(c)(3))| {\footnotesize{Santa Barbara, CA}}}
 
-Technical Support
+Web Engineer
 
 \years{2012- \ldots}
 
-Maintained existing website and VPS. Currently drafting and advising plans to
-help organization save a dramatic amount of money on website hosting, increase
-website performance, reduce maintenance, and provide for the possibility of
-effortless scaling 
+Maintained existing website and VPS. Drafted and implemented plans to help
+organization reduce hosting costs, increase website performance, reduce
+maintenance, and provide effortless scaling. Reimplemented website using static
+site generators and modern front-end frameworks.
 
 \section*{Selected Personal Projects and Contributions}
 
@@ -217,33 +204,40 @@ Ruby support tools. Framework is easy to extend should more advanced
 functionality be required (e.g. technical rivalries with other colleges). Also
 produced all design and artwork.
 
-\subsection*{UCSB Moodle Google Chrome Extension | {\footnotesize{Santa Barbara, CA}}}
+\subsection*{SmartReceipt Inc.| {\footnotesize{Santa Barbara, CA}}}
 
-Creator and Maintainer
+Intern
 
-\years{June 2012 - \ldots}
+\years{December 2012 - \ldots}
 
-Produced opinionated UI modifications in the form of a Google Chrome extension
-to University Courseware website. Additions include auto-login, minor usability
-fixes, quick-menu, and dashboard per course page. Audience of 80+ users.
+Observed and advised upon real-world development and systems administration
+practices. Contributed to whole infrastructure refactoring with Chef and Salt
+Stack.  Contributed and maintained company's main product offering's parsers.
+Developed new rapid workflow for Chef infrastructure development and
+application development. Investigated feasiablity of full end-to-end Windows
+Integration testing. Observed business, administration, and financial practices
+at a small company.
 
 \section*{Interests, Skills, and Hobbies}
 
 \begin{packed_item}
-\item \textbf{Languages} -- Scala, Java, Ruby, Object-oriented C/C++, and Python
-\item \textbf{Operating Systems and Platforms}
+    \item \textbf{Languages} -- Ruby, Python, Scala, and Java
+    \item \textbf{Operating Systems and Platforms}
         \begin{packed_item}
-            \item Debian and Ubuntu Server-- Debian Packaging and Administration
+            \item Ubuntu Server-- Debian Packaging and Administration
             \item Mac OS X -- Homebrew Recipes and \texttt{launchd}
             \item Android -- Native Java development.
-            \item Heroku -- Ruby on Rails, Play Framework 2, and automated scripts
+            \item Deployment -- Opscode Chef and Salt Stack
+            \item On-demand Compute and Storage -- Amazon Web Services and Rackspace Cloud
+            \item Heroku -- Ruby on Rails, Play Framework 2, and one-off automated scripts
         \end{packed_item}
     \item \textbf{Computer Networking} -- \texttt{iptables}, \texttt{pf}, and pfSense
-    \item \textbf{IDE} -- IntelliJ IDEA, Eclipse, Unix
-    \item \textbf{Text Editors} -- Vim
+    \item \textbf{IDE} -- IntelliJ IDEA and family, Eclipse, Vim, Unix
     \item \textbf{Databases} -- PostgreSQL and SQLite
-    \item \textbf{Web Development} -- HTML5, SCSS, LESS, Ruby on Rails, Play Framework 2, JavaScript, jQuery, Zurb Framework, Bootstrap, REST, and JSON
-    \item \textbf{Misc. Skills} -- OpenStreetMap, \texttt{git}, AutoHotKey, and \LaTeX
+    \item \textbf{Web Development} -- HTML5, SCSS, LESS, nanoc, Ruby on Rails, Play Framework 2, JavaScript, jQuery/Zepto, Zurb Foundation, Bootstrap, REST, and JSON
+    \item \textbf{Project Management} -- Trello
+    \item \textbf{Version Control} -- `git`, Subversion, and Mercurial
+    \item \textbf{Misc. Skills} -- AMPQ, Logstash, OpenStreetMap, \texttt{git}, AutoHotKey, and \LaTeX
 \end{packed_item}
 
 \section*{References}
@@ -253,6 +247,8 @@ fixes, quick-menu, and dashboard per course page. Audience of 80+ users.
 
 \reference{Natalie Lemonnier}{Because of Hope}
 {(818)620-8847}{natalie@becauseofhope.org}
+
+More references available upon request.
 
 %\hrule
 
@@ -267,10 +263,10 @@ fixes, quick-menu, and dashboard per course page. Audience of 80+ users.
 \end{multicols}
 
 \begin{center}
-{\scriptsize  Last updated: \today\- $\bullet$\- 
+{\scriptsize  Last updated: \today\- $\bullet$\-
 % ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
 % Typeset in \href{http://nitens.org/taraborelli/cvtex}{\XeTeX}\\
 % ---- FILL IN THE FULL URL TO YOUR CV HERE
-Copies available at \href{https://github.com/crazysim/cvtex}{https://github.com/crazysim/cvtex}}
+Copies/Source available at \href{https://github.com/crazysim/cvtex}{https://github.com/crazysim/cvtex}}
 \end{center}
 \end{document}
