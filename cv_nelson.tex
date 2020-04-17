@@ -1,0 +1,273 @@
+%-----------------------------------------------------------------------
+% Anderson Konzen (anderson.konzen at gmail)
+% Template of a CV typeset in XeTeX
+%
+% URL: https://github.com/anderkonzen/xetexcv
+% DISCLAIMER: This template is provided for free and without any
+%             guarantee that it will correctly compile on your
+%             system if you have a non-standard configuration.
+%
+% This work is a fork from https://github.com/dartar/cvtex. This
+% modified version is licensed under the same Creative Commons
+% Attribution-ShareAlike license:
+% http://creativecommons.org/licenses/by-sa/3.0/.
+%
+% (Please, keep a link to https://github.com/anderkonzen/xetexcv on
+% your source file for attribution as per CC-license.)
+%-----------------------------------------------------------------------
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[10pt, letter]{article}
+
+\def\myname{Nelson Chen}
+\def\myemail{nelson@mindflakes.com}
+% \def\myskype{crazysim1}
+\def\mycellphone{(626) 723-3427}
+\def\myaddress{Santa Barbara, CA}
+\def\mygithub{nelsonjchen}
+
+
+%% Loads the fontspec package, so we can easily select system fonts
+%\usepackage{fontspec}
+%% It implements some odds-and-ends features and improved functionality for broken or sub-standard LaTeX methods when using the XeTeX format. Already loads the fontspec package.
+\usepackage{xltxtra}
+%% Loads xcolor package, so we can use color names instead of rgb values
+\usepackage{xcolor}
+
+%-----------------------------------------------------------------------
+% Document Layout
+%-----------------------------------------------------------------------
+%% Loads geometry package, so we can easily change page setup
+\usepackage{geometry}
+\geometry{letterpaper,         %% Specifies the paper size
+  textwidth=7.5in,         %% Specifies the width of body (the text area)
+  textheight=10.5in,        %% Specifies the height of body (the text area)
+  marginparsep=7pt,        %% Modifies separation between body and marginal notes
+  marginparwidth=.5in}     %% Modifies width of the marginal notes
+\setlength\parindent{0in}  %% Amount of indentation at the first line of a paragraph.
+
+\usepackage{multicol}
+
+%-----------------------------------------------------------------------
+% Fonts
+%-----------------------------------------------------------------------
+\setmainfont[Mapping={tex-text},Numbers={OldStyle},Ligatures={Common}]{Linux Libertine O}
+\setsansfont[Mapping={tex-text},Color=AA0000]{Linux Biolinum O}
+\setmonofont[Mapping={tex-text},Scale=0.8]{Menlo}
+
+%-----------------------------------------------------------------------
+% Custom Commands
+%-----------------------------------------------------------------------
+\chardef\&="E050  % Redefine '&' character
+\newcommand{\html}[1]{\href{#1}{\scriptsize\textsc{[html]}}}
+\newcommand{\pdf}[1]{\href{#1}{\scriptsize\textsc{[pdf]}}}
+\newcommand{\doi}[1]{\href{#1}{\scriptsize\textsc{[doi]}}}
+%% Configure margin years
+\usepackage{marginnote}
+\newcommand{\years}[1]{\marginnote{#1}}
+\renewcommand*{\raggedleftmarginnote}{}  %% Define margin note alignment (in this case, justified text at the left margin)
+%\setlength{\marginparsep}{7pt}  %% Already defined in geometry
+\reversemarginpar  %% Margin notes in left side of the page
+
+\renewcommand{\years}[1]{{\emph{#1}}}
+
+% Reference
+\newcommand{\reference}[4]{
+\subsection*{#1 | {\footnotesize{#2}}}
+#3 -- \href{mailto:#4}{\texttt{#4}}
+}
+
+\newenvironment{packed_enum}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+
+\newenvironment{packed_item}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{0pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+%-----------------------------------------------------------------------
+% Headings
+%-----------------------------------------------------------------------
+%% Provides a set of commands for changing the font used for the various sectional headings
+\usepackage{sectsty}
+%% Provides various types of underlining that can stretch between words and be broken across lines
+\usepackage[
+  normalem  %% \em and \emph still produce normal italics
+]{ulem}
+%% Change font size of section headers
+\sectionfont{\color[HTML]{AA0000}\mdseries\upshape\Large}
+\subsectionfont{\mdseries\scshape\normalsize}
+\subsubsectionfont{\mdseries\upshape\large}
+
+%-----------------------------------------------------------------------
+% PDF Setup
+%-----------------------------------------------------------------------
+\usepackage[
+  xetex,            %% Use XeTeX backend
+  colorlinks=true,  %% Colors the text of links and anchors
+  breaklinks=true,  %% Allow links to break over lines
+  pdftitle={{\myname} - Curriculum Vitae},
+  pdfauthor={\myname}
+]{hyperref}
+\hypersetup{linkcolor=blue,filecolor=black,urlcolor=blue}
+
+%-----------------------------------------------------------------------
+%-----------------------------------------------------------------------
+% DOCUMENT
+%-----------------------------------------------------------------------
+\begin{document}
+{\LARGE \myname} - \emph{Software Engineer with an interest in rapid prototyping, testing, and productionization}\\
+\hrule
+\begin{multicols}{2}
+% \vspace{0.0in}
+{Phone: \mycellphone}\\[.01cm]
+{Email: \href{mailto:\myemail}{\texttt{\myemail}}}\\[.05cm]
+{GitHub: \href{http://www.github.com/\mygithub}{http://github.com/\mygithub}}
+%\hrule
+\section*{Experience}
+
+\subsection*{Mobivity Inc. (Acquired SmartReceipt Inc.) | {\footnotesize{San Diego, CA}}}
+
+Software Engineer
+
+\years{December 2012 - \ldots}
+
+Advised upon real-world development and systems administration practices.
+Contributed to whole infrastructure refactoring with Chef and Salt Stack.
+Contributed and maintained organization's main product offering's parsers and
+internals. Developed new rapid \texttt{kitchen}, \texttt{vagrant}, and
+automated testing workflow for Chef infrastructure development and application
+development. Ported and applied same ``clean room sandbox'' workflow to
+organization's legacy Rails application. Investigated feasibility and
+experimented with full end-to-end Integration testing on Company's client-end
+deployment. Produced customer map with static site generators, Google Map APIs
+and custom styled maps. Supported and tutored fellow team members on AWS usage
+security, and best practices. Migrated main customer-site-deployed software to
+version control best practices.  Supported and maintained printer stream interception software.
+Observed business, administration, financial, and management practices.
+
+\subsection*{Because of Hope (Nonprofit 501(c)3) | {\footnotesize{Santa Barbara, CA}}}
+
+Web Engineer
+
+\years{2012 - \ldots}
+
+Maintained existing website and VPS. Drafted and implemented plans to help
+organization reduce hosting costs, increase website performance, reduce
+maintenance, and provide effortless scaling using Amazon Web Services.
+Reimplemented website using static site generators and modern front-end
+frameworks. Continued maintainence and update of content. Satisfying ``Help
+poor children in Uganda'' directive in \texttt{vim}.
+
+\subsection*{UCSB Associated Students | {\footnotesize{Santa Barbara, CA}}}
+
+Technical Committee Vice Chair
+
+\years{2009 - 2012}
+
+Managed technical matters of committee activities including public website and
+internal software and hardware. Designed, setup, configure, and maintained
+a VMWare, Linux, Windows, and pfSense-based network, accompanying virtual
+machines for file sharing and network traffic management, and devised and
+improved upon workarounds for problematic network issues for LAN Parties for
+150+ attendees for every quarter since Fall of 2009 until December 2012.
+
+\subsection*{UCSB Housing and Residential | {\footnotesize{Santa Barbara, CA}}}
+
+Network Consultant
+
+\years{2009 - 2012}
+
+Helped residents in UCSB Residential Housing get their devices online with
+ResNet.  Developed tools to streamline configuration of these devices for
+printing to shared printers and to automatically configure the network. Helped
+physically install switches and hardware in dozens of locations on campus.
+Maintained internal documentation with regards to networking and procedures
+maintained. Assisted users one-on-one in troubleshooting any connectivity
+issues both simple and complex. Produced automated graphical setup tools for
+all major platforms to assist in configuration of 10,000 user systems with
+Printing and Wi-Fi Configuration.
+
+\section*{Selected Personal Projects and Contributions}
+
+\subsection*{UC Santa Barbara Subreddit Design | {\footnotesize{Santa Barbara, CA}}}
+
+Creator and Maintainer
+
+\years{May 2012 - \ldots}
+
+Produced most advanced Python, Ruby, and SASS framework and deployment tool for
+developing preprocessed stylesheets and templated markdown for section of
+website subscribed to by 3,000 users. Said framework is easy to deploy with
+minimal configuration and utilizes accepted standard Python and
+Ruby support tools. Framework is easy to extend should more advanced
+functionality be required (e.g. technical rivalries with other student bodies
+at other higher-learning institutions). Produced all design and artwork
+from scratch and released under CC-BY-SA.
+
+\section*{Education}
+
+\years{2008 - 2012}
+
+\textsc{Bachelor of Science} -- Computer Science at UCSB.
+
+\section*{Interests, Skills, and Hobbies}
+
+\begin{packed_item}
+    \item \textbf{Languages} -- Python, Ruby, Scala, Go, Rust, and Java
+    \item \textbf{Operating Systems and Platforms}
+        \begin{packed_item}
+            \item Ubuntu -- Debian Packaging and Administration
+            \item CoreOS -- Containerization and Docker.
+            \item Mac OS X -- Homebrew Recipes and \texttt{launchd}
+            \item Android -- Native Java development
+            \item Development and Operations -- Test-driven Chef, Salt Stack, Packer
+            \item On-demand Compute and Storage -- Amazon Web Services, Rackspace Cloud, and DigitalOcean
+            \item Heroku -- Ruby on Rails, Play Framework 2, and automated scripts
+        \end{packed_item}
+    \item \textbf{Computer Networking} -- \texttt{iptables}, \texttt{pf}, and pfSense
+    \item \textbf{IDE} -- IntelliJ IDEA and friends, Vim, Unix, Atom
+    \item \textbf{Databases} -- PostgreSQL and SQLite
+    \item \textbf{Web Development} -- HTML5, SCSS, LESS, nanoc, Ruby on Rails, Play Framework 2, JavaScript, jQuery, React, Bootstrap, REST, and JSON
+    \item \textbf{Project Management} -- Trello, HipChat, JIRA, Confluence, Slack
+    \item \textbf{Misc. Skills} -- AMPQ, Logstash, OpenStreetMap, AutoHotKey, Amazon Mechanical Turk, Illustrator, and \LaTeX
+\end{packed_item}
+
+% \section*{References}
+
+% \reference{Benjamin Price}{UCSB Housing and Residential Services}
+% {(805)893-5555}{bprice@housing.ucsb.edu}
+
+% \reference{Natalie Lemonnier}{Because of Hope}
+% {(818)620-8847}{natalie@becauseofhope.org}
+
+% More references available upon request.
+
+%\hrule
+
+%\hrule
+% \section*{References}
+
+% Available upon request.
+
+%\vspace{1cm}
+% \vfill{}
+%\hrulefill
+\end{multicols}
+
+\begin{center}
+{\scriptsize  Last updated: \today\- $\bullet$\-
+% ---- PLEASE LEAVE THIS BACKLINK FOR ATTRIBUTION AS PER CC-LICENSE
+% Typeset in \href{http://nitens.org/taraborelli/cvtex}{\XeTeX}\\
+% ---- FILL IN THE FULL URL TO YOUR CV HERE
+Copies/Source/Attribution available at \href{https://github.com/nelsonjchen/cvtex}{https://github.com/nelsonjchen/cvtex}}
+\end{center}
+\end{document}
